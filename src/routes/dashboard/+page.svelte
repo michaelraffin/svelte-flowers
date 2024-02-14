@@ -102,7 +102,7 @@
 										class="w-90 h-1/2 object-cover transition duration-500 group-hover:scale-105 sm:h-72"
 									/>
 								</div>
-								<Drawer.Description>{item.subtitle}</Drawer.Description>
+								<Drawer.Description class="text-xs">{item.subtitle}</Drawer.Description>
 							</Drawer.Header>
 							<Drawer.Footer>
 								<Button class="rounded-full">Submit</Button>

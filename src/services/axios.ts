@@ -1,9 +1,9 @@
 export async function fetchData(): Promise<any> {
 	try {
 		let payload = {
-			id: 'Flowers',
+			id: 'Flux-Bouquet',
 			queryType: 'filter',
-			storeOwner: '5ff00ddaeb2f5d0940dfa186',
+			storeOwner: '60b1c9a9a001ef1e463d52c2',
 			isAPI: true,
 			showLimit: true,
 			number: 100,
