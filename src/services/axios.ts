@@ -1,13 +1,13 @@
 export async function fetchData(): Promise<any> {
 	try {
 		let payload = {
-			id: 'Flux-Bouquet',
+			id: 'Flux-Bouquet', //'VALENTINESDAY', //
 			queryType: 'filter',
-			storeOwner: '60b1c9a9a001ef1e463d52c2',
-			isAPI: true,
+			storeOwner: '60b1c9a9a001ef1e463d52c2', //'5ff00ddaeb2f5d0940dfa186', //
+			isAPI: false,
 			showLimit: true,
 			number: 100,
-			deliveryDate: '2024-02-20'
+			deliveryDate: '2024-03-20'
 		};
 		const response = await fetch('https://www.smestoreph.com/productV2/Product', {
 			method: 'POST',
