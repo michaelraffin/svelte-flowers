@@ -10,6 +10,7 @@
 	import { fetchData } from '$lib/../services/axios';
 	import { Skeleton } from '$lib/components/ui/skeleton';
 	import * as Drawer from '$lib/components/ui/drawer';
+
 	let value = today(getLocalTimeZone());
 	let checked = false;
 	let response = [];
@@ -41,7 +42,7 @@
 </div>
 
 <Skeleton class="h-[100px] w-[100px] " />
-<div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
+<div class="m-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
 	{#each response as item}
 		<a
 			href="javascript:void(0);"
@@ -83,10 +84,10 @@
 				<img
 					src={item.imgUrl}
 					alt=""
-					class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72"
+					class="h-64 w-full rounded-lg object-contain transition duration-500 group-hover:scale-105 sm:h-72"
 				/>
 				<Badge variant="destructive" cl class="absolute left-2 top-8">New</Badge>
-				<div class="relative rounded-lg border border-gray-100 bg-white p-6">
+				<div class="relative rounded-lg border border-gray-50 bg-white p-6">
 					<!-- <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"> New </span> -->
 
 					<h3 class="mt-4 text-xs font-medium text-gray-900">{item.title}</h3>
@@ -96,7 +97,12 @@
 							<Drawer.Trigger
 								class="w-full place-content-between  justify-center space-x-4 align-middle"
 							>
-								<div class="flex w-full justify-around">
+								<div class="w-full justify-around lg:flex">
+									<img
+										alt="cc"
+										src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6Dr9he6yZ0uOJ9b1_bZuhxyLfEaQS67JXQw&usqp=CAU"
+										class="m-2 h-2 w-4"
+									/>
 									<div class="justify-start text-left">
 										<p class="text-lg">{formatPeso(parseInt(item.price))}</p>
 										<div class="flex-row-2 flex content-center items-center align-middle">
@@ -111,11 +117,9 @@
 										</div>
 									</div>
 									<button
-										class="font-xs block h-auto w-1/4 bg-black p-2 text-xs text-white transition hover:scale-105"
+										class="font-xs block h-8 w-full rounded-full bg-black p-2 text-xs text-white transition hover:scale-105 lg:w-1/4"
 									>
 										View
-										<!-- {item.price} -->
-										<!-- <p class="font-xs mt-1.5 text-xs text-gray-700"></p> -->
 									</button>
 								</div>
 							</Drawer.Trigger>

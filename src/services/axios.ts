@@ -4,7 +4,7 @@ export async function fetchData(): Promise<any> {
 			id: 'Flux-Bouquet', //'VALENTINESDAY', //
 			queryType: 'filter',
 			storeOwner: '60b1c9a9a001ef1e463d52c2', //'5ff00ddaeb2f5d0940dfa186', //
-			isAPI: false,
+			isAPI: true,
 			showLimit: true,
 			number: 100,
 			deliveryDate: '2024-03-20'
