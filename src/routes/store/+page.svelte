@@ -37,12 +37,12 @@
 		Accept terms and conditions
 	</Label> -->
 </div>
-<div class="m-20 w-80">
+<div class="w-100 m-4 lg:m-20">
 	<!-- <Calendar bind:value class="rounded-lg border " /> -->
 </div>
 
 <Skeleton class="h-[100px] w-[100px] " />
-<div class="m-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
+<div class="m-2 grid grid-cols-2 gap-4 lg:m-10 lg:grid-cols-4">
 	{#each response as item}
 		<a
 			href="javascript:void(0);"
@@ -98,22 +98,24 @@
 								class="w-full place-content-between  justify-center space-x-4 align-middle"
 							>
 								<div class="w-full justify-around lg:flex">
-									<img
-										alt="cc"
-										src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6Dr9he6yZ0uOJ9b1_bZuhxyLfEaQS67JXQw&usqp=CAU"
-										class="m-2 h-2 w-4"
-									/>
-									<div class="justify-start text-left">
-										<p class="text-lg">{formatPeso(parseInt(item.price))}</p>
-										<div class="flex-row-2 flex content-center items-center align-middle">
-											<p class="text-xs text-[#4C7B33]">
-												{formatPeso(item.price * 0.15 + parseInt(item.price))}
-											</p>
-											<img
-												alt="cc"
-												src="https://static-00.iconduck.com/assets.00/mastercard-icon-2048x1225-3kb6axel.png"
-												class="m-2 h-2 w-4"
-											/>
+									<div class="hidden lg:block">
+										<img
+											alt="cc"
+											src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6Dr9he6yZ0uOJ9b1_bZuhxyLfEaQS67JXQw&usqp=CAU"
+											class="m-2 h-2 w-4"
+										/>
+										<div class="justify-start text-left">
+											<p class="text-lg">{formatPeso(parseInt(item.price))}</p>
+											<div class="flex-row-2 flex content-center items-center align-middle">
+												<p class="text-xs text-[#4C7B33]">
+													{formatPeso(item.price * 0.15 + parseInt(item.price))}
+												</p>
+												<img
+													alt="cc"
+													src="https://static-00.iconduck.com/assets.00/mastercard-icon-2048x1225-3kb6axel.png"
+													class="m-2 h-2 w-4"
+												/>
+											</div>
 										</div>
 									</div>
 									<button
@@ -153,4 +155,4 @@
 	{/each}
 </div>
 
-<div class="absolute bottom-2 left-0">Cart</div>
+<!-- <div class="absolute bottom-2 left-0">Cart</div> -->
